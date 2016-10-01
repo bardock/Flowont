@@ -16,6 +16,15 @@ namespace Bardock.Flowont.Tests
         }
 
         [Fact]
+        public void HappyPathStatus()
+        {
+            var actual = Flow.HappyPathStatus;
+
+            var expected = new[] { TicketNodes.Pending, TicketNodes.Approved, TicketNodes.Closed, TicketNodes.Archived };
+            Assert.Equal(expected, actual);
+        }
+
+        [Fact]
         public void SortedNodes()
         {
             var actual = Flow.SortedNodes;
