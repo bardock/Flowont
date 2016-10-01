@@ -57,7 +57,7 @@ namespace Bardock.Flowont.Tests
         {
             var user = new User()
             {
-                RoleIDs = new List<Roles>() { Roles.OnlyApprovedAndRejected }
+                RoleIDs = { Roles.OnlyApprovedAndRejected }
             };
 
             var expr = TicketFlowDefinitions.Instance.GetIsInNodeExpression(TicketNodes.Approved);
@@ -75,7 +75,7 @@ namespace Bardock.Flowont.Tests
         {
             var user = new User()
             {
-                RoleIDs = new List<Roles>() { Roles.OnlyApprovedAndRejected }
+                RoleIDs = { Roles.OnlyApprovedAndRejected }
             };
 
             var expr = TicketFlowDefinitions.Instance.GetIsInNodeExpression(TicketNodes.Approved);
@@ -95,7 +95,7 @@ namespace Bardock.Flowont.Tests
         {
             var user = new User()
             {
-                RoleIDs = new List<Roles>() { Roles.OnlyApprovedAndRejected }
+                RoleIDs = { Roles.OnlyApprovedAndRejected }
             };
 
             var expr = TicketFlowDefinitions.Instance.GetIsVisibleExpression(new TicketWorkFlowContext() { User = user });
@@ -113,7 +113,7 @@ namespace Bardock.Flowont.Tests
         {
             var user = new User()
             {
-                RoleIDs = new List<Roles>() { Roles.OnlyApprovedAndRejected }
+                RoleIDs = { Roles.OnlyApprovedAndRejected }
             };
 
             var expr = TicketFlowDefinitions.Instance.GetIsVisibleExpression(new TicketWorkFlowContext() { User = user });
@@ -133,7 +133,7 @@ namespace Bardock.Flowont.Tests
         {
             var user = new User()
             {
-                RoleIDs = new List<Roles>() { Roles.CannotViewTitleInPending }
+                RoleIDs = { Roles.CannotViewTitleInPending }
             };
 
             var expr = TicketFlowDefinitions.Instance.GetActionIsAllowedExpression(
@@ -154,7 +154,7 @@ namespace Bardock.Flowont.Tests
         {
             var user = new User()
             {
-                RoleIDs = new List<Roles>() { Roles.CannotViewPending }
+                RoleIDs = { Roles.CannotViewPending }
             };
 
             var expr = TicketFlowDefinitions.Instance.GetActionIsAllowedExpression(
@@ -172,7 +172,7 @@ namespace Bardock.Flowont.Tests
         {
             var user = new User()
             {
-                RoleIDs = new List<Roles>() { Roles.CannotViewTitleInPending }
+                RoleIDs = { Roles.CannotViewTitleInPending }
             };
 
             var expr = TicketFlowDefinitions.Instance.GetActionIsAllowedExpression(
@@ -208,7 +208,7 @@ namespace Bardock.Flowont.Tests
         {
             var user = new User()
             {
-                RoleIDs = new List<Roles>() { Roles.CanClose }
+                RoleIDs = { Roles.CanClose }
             };
 
             var expr = TicketFlowDefinitions.Instance.GetIsAnyActionAllowedExpression(
@@ -231,7 +231,7 @@ namespace Bardock.Flowont.Tests
         {
             var user = new User()
             {
-                RoleIDs = new List<Roles>() { Roles.CanClose, Roles.CannotViewPending }
+                RoleIDs = { Roles.CanClose, Roles.CannotViewPending }
             };
 
             var expr = TicketFlowDefinitions.Instance.GetIsAnyActionAllowedExpression(
@@ -253,7 +253,7 @@ namespace Bardock.Flowont.Tests
         {
             var user = new User()
             {
-                RoleIDs = new List<Roles>() { Roles.CanClose }
+                RoleIDs = { Roles.CanClose }
             };
 
             var expr = TicketFlowDefinitions.Instance.GetIsAnyActionAllowedExpression(
